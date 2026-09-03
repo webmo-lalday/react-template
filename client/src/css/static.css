@@ -1,0 +1,14 @@
+nav.bar {
+    background-color: #481930;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+}
+
+nav.menu {
+    background-color: #293950;
+}
+
+footer {
+    background-color: #d9e0f7;
+}
