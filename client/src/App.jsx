@@ -9,6 +9,7 @@ import Home from './pages/Home';
 export default function App() {
   return (
     <Router>
+      <main>
       <Navbar />
       <Navmenu />
       <Routes>
@@ -16,6 +17,7 @@ export default function App() {
         <Route path='*' element={<Error code={404} />} />
       </Routes>
       <Footer />
+      </main>
     </Router>
   )
 }
