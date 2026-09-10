@@ -1,0 +1,7 @@
+svg {
+    stroke: currentColor;
+    stroke-width: 10;
+    fill:none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
