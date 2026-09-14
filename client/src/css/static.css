@@ -8,11 +8,15 @@
 nav {
     display: flex;
     transition: 0.2s ease;
+    position: absolute;
+    top: 0;
+    z-index: 999;
 }
 
 .nav-link {
     text-decoration: none;
-    transition: 0.2s ease;;
+    transition: 0.2s ease;
+    /* padding: 20px; for some reason this breaks everything */
 }
 .nav-link:hover {
     background-color: var(--hover-bg);
@@ -24,6 +28,7 @@ nav {
     transition: 0.4s ease-in-out;
     width: 100vw;
     box-sizing: border-box;
+    align-items: stretch;
 }
 .dropdown {
     position: relative;
@@ -58,6 +63,8 @@ nav {
         color: var(--nav-text);
     }
     nav:hover .nav-links {
+        opacity: 90%;
+        height: 100vh;
         max-height: 100vh;
         overflow-y: auto;
     }
