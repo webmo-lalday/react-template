@@ -1,16 +1,78 @@
-nav.bar {
-    background-color: #481930;
-    width: 100vw;
-    position: sticky;
-    top: 0;
+:root {
+    --nav-1: #d9e0f7;
+    --nav-2: #229270;
+    --nav-text: #f0b0b8;
+    --hover-bg: #ffffff90;
 }
 
-nav.menu {
-    background-color: #293950;
+nav {
+    display: flex;
+    transition: 0.2s ease;
+}
+
+.nav-link {
+    text-decoration: none;
+    transition: 0.2s ease;;
+}
+.nav-link:hover {
+    background-color: var(--hover-bg);
+}
+
+.nav-links {
+    background: linear-gradient(to bottom right, var(--nav-1), var(--nav-2));
+    display: flex;
+    transition: 0.4s ease-in-out;
+    width: 100vw;
+    box-sizing: border-box;
+}
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s ease-in-out;
+}
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+}
+.dropdown:hover .dropdown-content {
+    max-height: 400px;
+}
+
+@media (width<=780px) {
+    .nav-links {
+        flex-direction: column;
+        max-height: 0px;
+        top: 0;
+        overflow: hidden;
+    }
+    nav .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 20px;
+        border-radius: 100px;
+        border-top-right-radius: 0;
+        background-color: #229270;
+        text-align: center;
+        color: var(--nav-text);
+    }
+    nav:hover .nav-links {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+}
+@media (width>780px) {
+    nav {
+        flex-direction: row;
+    }
+    nav .icon {
+        display: none;
+    }
 }
 
 footer {
-    background-color: #d9e0f7;
+    background-color: var(--nav-1);
     padding: 5%;
     display: flex;
     justify-content: center;
