@@ -7,15 +7,19 @@ export default function Nav() {
             <div className="nav-links">
                 <Link className="nav-link" to='/'>Home</Link>
                 <Link className="nav-link" to='/'>Home</Link>
-                <div className="nav-link dropdown">
+                <div className="dropdown">
                     <div className="nav-link">Content</div>
-                    <Link className="nav-link dropdown-content" to='/'>Nested</Link>
-                    <Link className="nav-link dropdown-content" to='/'>Nested</Link>
+                    <div className="dropdown-content">
+                        <Link className="nav-link" to='/'>Nested</Link>
+                        <Link className="nav-link" to='/'>Nested</Link>
+                    </div>
                 </div>
-                <div className="nav-link dropdown">
+                <div className="dropdown">
                     <div className="nav-link">Content</div>
-                    <Link className="nav-link dropdown-content" to='/'>Nested</Link>
-                    <Link className="nav-link dropdown-content" to='/'>Nested</Link>
+                    <div className="dropdown-content">
+                        <Link className="nav-link" to='/'>Nested but long ass name</Link>
+                        <Link className="nav-link" to='/'>Nested</Link>
+                    </div>
                 </div>
                 <Link className="nav-link" to='/'>Home</Link>
                 <Link className="nav-link" to='/'>Home</Link>
