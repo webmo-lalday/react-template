@@ -16,10 +16,10 @@ export default function Home() {
                  * polygon
                  <polygon points="0 0, 100 50, 50 100" />
                  * path
-                 */}
                  <path
                     d="M 50 0 Q 50 100 0 100 A 50 50 0 0 1 100 100 Q 70 80 70 30 Q 65 100 50 110"
                  />
+                 */}
             </svg>
             <h4>Goals to implement</h4>
             <ul>
