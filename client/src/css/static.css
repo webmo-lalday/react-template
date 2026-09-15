@@ -1,8 +1,37 @@
+@charset 'utf-8';
+
 :root {
     --nav-1: #d9e0f7;
     --nav-2: #229270;
     --nav-text: #f0b0b8;
     --hover-bg: #ffffff90;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    flex: 1;
+    width: 100%;
+    padding: 10%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 nav {
@@ -15,8 +44,9 @@ nav {
 
 .nav-link {
     text-decoration: none;
-    transition: 0.2s ease;
-    /* padding: 20px; for some reason this breaks everything */
+    transition: 0.5s ease;
+    padding: 10px;
+    box-sizing: border-box;
 }
 .nav-link:hover {
     background-color: var(--hover-bg);
@@ -34,11 +64,16 @@ nav {
     position: relative;
     display: flex;
     flex-direction: column;
-    transition: 0.4s ease-in-out;
+    padding: 0;
 }
 .dropdown-content {
+    transition: 0.4s ease;
     max-height: 0;
+    display: flex;
     overflow: hidden;
+    flex-direction: column;
+    min-width: max-content;
+    box-sizing: border-box;
 }
 .dropdown:hover .dropdown-content {
     max-height: 400px;
@@ -46,9 +81,9 @@ nav {
 
 @media (width<=780px) {
     .nav-links {
-        flex-direction: column;
         max-height: 0px;
         top: 0;
+        flex-direction: column;
         overflow: hidden;
     }
     nav .icon {
@@ -64,9 +99,11 @@ nav {
     }
     nav:hover .nav-links {
         opacity: 90%;
-        height: 100vh;
         max-height: 100vh;
         overflow-y: auto;
+    }
+    .dropdown-content {
+        padding-left: 20px;
     }
 }
 @media (width>780px) {
@@ -76,11 +113,19 @@ nav {
     nav .icon {
         display: none;
     }
+    .dropdown-content {
+        background-color: var(--nav-1);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 100%;
+        width: max-content;
+    }
 }
 
 footer {
     background-color: var(--nav-1);
-    padding: 5%;
+    padding: 50px;
     display: flex;
     justify-content: center;
 }
