@@ -7,8 +7,9 @@ export default function Nav() {
             <div className="nav-links">
                 <Link className="nav-link" to='/'>Home</Link>
                 <Link className="nav-link" to='/style'>Stylesheet</Link>
+                <Link className="nav-link" to='/notalink'>Error</Link>
                 <div className="dropdown">
-                    <div className="nav-link disabled">Content</div>
+                    <div className="nav-link disabled">Dropdown</div>
                     <div className="dropdown-content">
                         <Link className="nav-link" to='/'>Nested</Link>
                     </div>
