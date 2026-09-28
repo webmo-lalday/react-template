@@ -177,3 +177,34 @@ footer {
 .color-swatch h4 {
     margin: 0;
 }
+
+/* loading animation */
+
+.loader-container {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  animation: loader-spin 1s steps(8) infinite;
+}
+
+.loader__dot {
+  fill: #808080;
+}
+
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader {
+    animation: none;
+  }
+}
