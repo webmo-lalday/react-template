@@ -8,7 +8,7 @@ export default function Home() {
             </article>
             <article>
                 <div className="card-container">
-                    <div className="rainbow card">
+                    <div className="card">
                         <h2>Card</h2>
                         <h3>Subheader</h3>
                         <p>Content</p>
