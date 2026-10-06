@@ -61,6 +61,7 @@ nav {
     display: flex;
     top: 0;
     z-index: 999;
+    right: 0;
 }
 
 .nav-link {
@@ -118,6 +119,7 @@ nav {
 @media (width<=780px) {
     nav {
         position: absolute;
+        width: 100%;
     }
     .nav-links {
         max-height: 0px;
@@ -171,8 +173,8 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    gap: 20px;
 }
-
 footer img {
     width: 50px;
     align-self: center;
@@ -188,8 +190,14 @@ footer a:hover {
 }
 
 hr {
-    margin: 0 20px;
+    margin: 0;
     align-self: stretch;
+    justify-self: stretch;
+}
+@media screen and (width<=420px) {
+    footer section {
+        flex-direction: column;
+    }
 }
 
 /* branding */

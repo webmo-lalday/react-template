@@ -11,12 +11,72 @@ h6 {
 }
 
 button {
-
+    border-radius: 10px;
+    border: none;
+    transition: 0.2s ease;
+    padding: 10px 20px;
+    box-shadow: 0 0 2px 1px gray;
+}
+button:hover {
+    box-shadow: 0 0 2px 1px lightgray;
+}
+button:active {
+    transform: scale(0.9);
 }
 
 .hero {
-    background: linear-gradient(to left, #378dbd20, #378dbd);
-    padding: 10%;
+    background: linear-gradient(to left, #0a3f5c, #378dbd);
+    padding: 20vh 10%;
+    color: white;
     box-sizing: border-box;
     max-width: 100%;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 15%;
+    margin: auto;
+}
+
+.card {
+    border-radius: 15px;
+    border: 1px solid var(--primary-2);
+    box-shadow: 0 0 5px 1px var(--primary-2-light);
+    padding: 1rem;
+    flex: 1 1 300px;
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: linear-gradient(110deg, var(--neutral-2), whitesmoke, var(--neutral-2));
+}
+
+.rainbow {
+    background: linear-gradient(110deg, #d8b7b7, #ddcdb8, #d4d4a7, #b3d6b3, #c7cfe4, #e6c8e6);
+}
+
+.card button {
+    background-color: var(--primary-2-light);
+    box-shadow: 0 0 2px 1px black;
+    opacity: 0.8;
+    mix-blend-mode: color-burn;
+    font-weight: bold;
+
+}
+
+.card:hover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 20%, #70707070, transparent 70%);
+    mix-blend-mode: color-burn;
+    transform: translateX(-100%);
+    animation: sweep 2.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes sweep {
+    to { transform: translateX(100%); }
 }
